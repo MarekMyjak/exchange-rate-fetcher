@@ -1,6 +1,5 @@
 package pl.dashboard.nbp;
 
-
 class MainClass {
 
     private static final String WRONG_NUMBER_OF_ARGUMENT_ERROR_MESSAGE = "Wrong number of arguments, expected 1.";
@@ -14,7 +13,4 @@ class MainClass {
 
         ExchangeRateProcessor.INSTANCE.process(date);
     }
-
-
-
 }
