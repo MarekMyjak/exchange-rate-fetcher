@@ -10,8 +10,8 @@ public enum ExchangeRateDateValidator {
             return true;
         }
         return Stream.of(StartOfDataCollectionValidator.INSTANCE,
-                StartOfDataCollectionValidator.INSTANCE,
-                StartOfDataCollectionValidator.INSTANCE)
+                FutureDateValidator.INSTANCE,
+                DayOfWeekendValidator.INSTANCE)
                 .anyMatch(validator -> isInValid(validator, date));
     }
 
