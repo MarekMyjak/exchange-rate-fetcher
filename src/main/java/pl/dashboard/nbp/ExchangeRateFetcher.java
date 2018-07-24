@@ -34,11 +34,14 @@ enum ExchangeRateFetcher {
             return exchangeRates.stream().filter(ExchangeRate::isCodeValid).collect(Collectors.toList());
         }
 
+        return throwException(response.getBody());
+    }
+
+    private List<ExchangeRate> throwException(String body) {
         String errorMessage = new TextStringBuilder()
                 .appendln(UNKNOWN_ERROR_MESSAGE)
-                .appendln(CAUSE_FORMAT, response.getBody())
+                .appendln(CAUSE_FORMAT, body)
                 .build();
-        System.out.println(errorMessage);
-        return null;
+        throw new IllegalStateException(errorMessage);
     }
 }
