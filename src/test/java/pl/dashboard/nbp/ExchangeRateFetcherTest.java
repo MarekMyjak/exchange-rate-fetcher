@@ -1,6 +1,5 @@
 package pl.dashboard.nbp;
 
-import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
