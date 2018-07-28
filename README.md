@@ -1,3 +1,3 @@
 # exchange-rate-fetcher
 
-Application returns list of exchange rate for currency USD, EUR, CHF, GBP
+Application calculate average bid price and calculate standard deviaton of ask price
