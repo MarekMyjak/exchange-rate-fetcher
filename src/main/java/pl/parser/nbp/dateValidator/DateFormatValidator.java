@@ -1,4 +1,4 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
 
 import static java.lang.String.format;
 import static org.apache.commons.validator.routines.DateValidator.getInstance;

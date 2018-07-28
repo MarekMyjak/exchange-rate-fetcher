@@ -1,4 +1,4 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
 
 import java.util.stream.Stream;
 
@@ -10,8 +10,7 @@ public enum ExchangeRateDateValidator {
             return true;
         }
         return Stream.of(StartOfDataCollectionValidator.INSTANCE,
-                FutureDateValidator.INSTANCE,
-                DayOfWeekendValidator.INSTANCE)
+                FutureDateValidator.INSTANCE)
                 .anyMatch(validator -> isInValid(validator, date));
     }
 

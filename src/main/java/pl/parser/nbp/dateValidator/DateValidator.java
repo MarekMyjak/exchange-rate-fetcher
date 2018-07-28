@@ -1,4 +1,4 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
 
 interface DateValidator {
     String DATE_FORMAT = "yyyy-MM-dd";

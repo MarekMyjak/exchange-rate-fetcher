@@ -1,7 +1,8 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
+
+import pl.parser.nbp.DateCreator;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 
 enum FutureDateValidator implements DateValidator {
@@ -20,8 +21,7 @@ enum FutureDateValidator implements DateValidator {
     }
 
     private boolean isFromFuture(String dateAsString) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
-        LocalDate date = LocalDate.parse(dateAsString, formatter);
+        LocalDate date = DateCreator.INSTANCE.create(dateAsString);
         return date.isAfter(LocalDate.now());
     }
 }

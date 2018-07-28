@@ -1,4 +1,4 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
 
 import org.junit.Test;
 

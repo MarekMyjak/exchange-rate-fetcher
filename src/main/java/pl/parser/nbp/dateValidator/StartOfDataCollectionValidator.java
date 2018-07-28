@@ -1,7 +1,8 @@
-package pl.dashboard.nbp.dateValidator;
+package pl.parser.nbp.dateValidator;
+
+import pl.parser.nbp.DateCreator;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 enum StartOfDataCollectionValidator implements DateValidator {
     INSTANCE;
@@ -20,9 +21,8 @@ enum StartOfDataCollectionValidator implements DateValidator {
     }
 
     private boolean isBefore2002(String dateAsString) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
-        LocalDate date = LocalDate.parse(dateAsString, formatter);
-        LocalDate startDate = LocalDate.parse(START_OF_DATA_COLLECTION_DATE, formatter);
+        LocalDate date = DateCreator.INSTANCE.create(dateAsString);
+        LocalDate startDate = DateCreator.INSTANCE.create(START_OF_DATA_COLLECTION_DATE);
         return date.isBefore(startDate);
     }
 }
